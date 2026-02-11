@@ -1,0 +1,98 @@
+
+1) How Brokers Get Leads
+   =====================
+		- 4 ways:
+			- Previous clients
+			- Referrals
+			- Purchase leads
+			- Advertising
+			
+		- Technologies
+			- Brand 360
+				- Essentially a customer management system
+			- Boost
+				- 3rd party app where brokers can purchase leads
+				- Integrates into Brand 360
+			- Brand Builder (Brand 360)
+					- Flyers
+					- eMails
+					- Social Media
+			- Marketing Calendar (Brand 360)
+			- Social Analytics  (Brand 360)
+			- Mortgage Matchup (stand-alone website)
+
+
+2) Turning Leads Into Loans
+   ========================
+		1) Pre-qualify borrower
+			- Assing if bowerer would qualify for loan
+			- Get initial idea of (potential) borrower's financial situatuion
+			- "Easy Qualifier" (EQ)
+				- System used to pre-qualify (potential) borrower
+			- Broker pulls (potential) borrower's credit score
+
+		2) (Potential) Borrower complets loan application
+			- (Loan Application) "1003" document
+				- Contins information about borrower's:
+					- Assets
+					- Liabilities
+					- Propery sought to be purchased
+					- Other details relating to, and needed for, the loan / underwriting process
+				- Blink+
+					- Borrower uses this for 1003 / application information
+
+		3) The system creates a "3.4" file via the Loan Originiation System (LOS)
+			- Industry standard file created from data provided in the 1003 document
+
+		4) Import the "3.4" file from the broker's LOS into UWM's EASE system
+			- EASE is accessed via the UWM Portal (public / brokwer-facing UI)
+			- Broker imports 3.4 file and then runs the "Automated Underwriting System" (AUS)
+				- AUS:
+					- Assesses borrower's eligibility for a loan by analyzing credit score, income, and debt-to-income ratio data
+					- Integrations into  Freddie Mac & Fannie Mae's systems to determine which outlet would have a better chance to purchase the loan (should the loan be created & reach maturity)
+
+
+3) UWM's Streams of Revenue
+   ========================
+		1) Pricing Loans
+			- Brokers pay UWM to lock in specific interest rates for the borrowers in question / AKA "rate lock"
+				- Broker is paying to allow borrower to use the rate at time of "locking" EVEN IF the interest rate were to raise before loan is funded / sold / reaches maturity
+					- What if the rate falls between "locking" and loan being funded / sold / reaching maturity... ?
+				- UWM updates "rate sheets" daily via Destiny system
+				- Rate sheets made available to broker via EASE & EQ
+
+		2) Hedging & Trading
+			- UWM trades "TBA Forwards"s which help minimize any potential loses to UWM from the market volitilty post "rate lock"
+			- TBAs help ensure the rate at which the broker locks in the loan at ("rate lock") will be the price UWM is paid when the loan is to the point where it can be sold (Fannie, Freddie, open market, etc.)
+
+		3) Selling loans
+			- Sold in "pools" or "groups" of loans which have common attributes such that grouping, or pooling, the loans
+				- Examples of common attributes include are credit rating, loan-to-value (LTV), loan purpose
+			- Sell loans to agencies such as Fannie Mae, Freddic Mac, and Ginnie Mae
+				- Fannie & Freddie only accept CONVENTIONAL LOANS
+				- Ginnie Mae accepts government loans (e.g., VA & FHA)
+				- Non-agency investors who accept jumbo & investor flex loans
+				- The more UWM sells off, the more liquidity UWM has to purchase (fund) future loans
+					- "Warehouse lines" are essentially the lines of credit / liquidity that UWM has to purchase future loans from selling previous loans
+
+		4) Servicing
+			- Collecting reoccuring (e.g., monthly) payments on previously funded / matured loans
+				- UWM partners with 3rd party vendors for servicing phase
+			- Mortgage Servicing Rights ("MSR"s) provided to 3rd party vendors from UWM to perform servicing functions / actions
+			- 3rd party take portion of payment for services rendered on behalf of UWM
+
+
+4) Repurchases
+   ===========
+		- Causes UWM to incur **losses**
+		- UWM is required to buy-back the loan(s) from an agency or invester due to an error that violates their (the purchaser) guidlines (for purchasing a loan)
+		- Caused by multititude of reasons:
+			- Incomplete data in loan package
+			- Missing data / document(s) in loan package
+			- Mislabeled document in DocHub
+			- Miscalculations of borrowers elgibility
+			- Any erroneous data in the data of the loan package / documents
+			- Anything that would violate the guidlines of the targeted loan purchaser (e.g., Fannie, Freddie, Ginnie, etc.)
+		- Once UWM repurchases a loan, the loan can then only be re-sold (once the issues relating to the loan in question have been corrected) on the secdonary (or "scratch-and-dent") market(s)
+		- Loans are sold on the secondary markets in large discounts due to the mistrust that the loan information is correct (regardless if the original issues have truely been corrected or not)
+		- EASE, Edge, and DocHub (including other technologies) can have a big impact on the chances a loan will have been be bought back or not
