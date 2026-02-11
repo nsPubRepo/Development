@@ -1,0 +1,176 @@
+
+#01 (TESTING)
+	(issueFunction not in linkedIssuesOf("issuetype = test")) AND
+	(issuetype in (Story, bug)) AND
+	(status = done) AND
+	(resolution != Cancelled) AND
+	(resolved >= startOfMonth(-1)) AND
+	(resolved <= endOfMonth(-1)) AND
+	("Zephyr N/A Reason" is EMPTY) AND
+	(project = "Document Reporting Power BI ") AND
+	(reporter IN membersOf("GRP-D-IT Product Planning & Dev"))
+
+
+
+#02 Active_Anything_PowerBI
+	Project = "Document Reporting Power BI " AND Status NOT IN ("DONE", "INACTIVE") ORDER BY Created DESC
+
+
+
+#03 Active_Non_PBI_Assigned_To_Me
+	Project != "Document Reporting Power BI " AND Assignee = nstuart AND Status != Done ORDER BY Created DESC
+
+
+
+#04 Active_PBI_Assigned_To_Me
+	Project = "Document Reporting Power BI " AND Assignee = nstuart AND Status NOT IN ("Done", "Inactive") ORDER BY Created DESC
+
+
+
+#05 Active_Where_I'm_Reporter
+	Reporter = nstuart AND Status NOT IN ("Done", "INACTIVE") ORDER BY Created DESC
+
+
+
+#06 Active_Where_I'm_Watcher
+	PROJECT = "Document Reporting Power BI " AND WATCHER in ("nathan stuart") and STATUS NOT IN (Closed, Done) ORDER BY Created DESC
+
+
+
+#07 Anything_Active_Assigned_To_Me
+	Assignee = nstuart AND Status != Done ORDER BY Created DESC
+
+
+
+#08 Anything_Inactive_Assigned_To_Me
+	Assignee = nstuart AND Status = Done ORDER BY Created DESC
+
+
+
+#09 Anything_Where_I'm_Watcher
+	watcher = currentUser()
+
+
+
+#10 Closed_Anything_PowerBI
+	Project = "Document Reporting Power BI " AND Status = Done ORDER BY Created DESC
+
+
+
+#11 Closed_Non_PBI_Assigned_To_Me
+	Project != "Document Reporting Power BI " AND Assignee = nstuart AND Status = Done ORDER BY Created DESC
+
+
+
+#12 Closed_PBI_Assigned_To_Me
+	Project = "Document Reporting Power BI " AND Assignee = nstuart AND Status = Done ORDER BY Created DESC
+
+
+
+#13 Closed_Where_I'm_Reporter
+	Reporter = nstuart AND Status = Done ORDER BY Created DESC
+
+
+
+#14 TC_Done_Current_Year
+	(project = "Document Reporting Power BI ") AND
+	(type = "Test") AND
+	(issueFunction IN linkedIssuesOf('project = "Document Reporting Power BI "')) AND
+	(created >= startOfYear()) AND
+	(resolved <= endOfYear())
+
+
+
+#15 TC_Done_Previous_Year
+	(project = "Document Reporting Power BI ") AND
+	(type = "Test") AND
+	(status = "Done") AND
+	(created >= startOfYear(-1)) AND
+	(resolved <= endOfYear(-1))
+
+
+
+#16 TC_Not_Done_Current_Year
+	(project = "Document Reporting Power BI ") AND
+	(type = "Test") AND
+	(
+		(component is EMPTY) OR
+		(
+			(comment ~ "START") AND
+			(comment !~ "DONE")
+		)
+	) AND
+	(created >= startOfYear())
+
+
+
+#17 TC_Not_Done_Current_Year_DEPRECATED
+	(project = "Document Reporting Power BI ") AND
+	(type = "Test") AND
+	(
+		  (component is EMPTY) OR
+		  (status != "Done")
+	) AND
+	(created >= startOfYear())
+
+
+
+#18 TC_Not_Done_Previous_Year
+	(project = "Document Reporting Power BI ") AND
+	(type = "Test") AND
+	(issueFunction IN linkedIssuesOf('project = "Document Reporting Power BI " AND status = "Done"')) AND
+	(created >= startOfYear(-1))
+
+
+
+#19 TC_Not_Done_Previous_Year_DEPRECATED
+	(project = "Document Reporting Power BI ") AND
+	(type = "Test") AND
+	(status != "Done") AND
+	(created >= startOfYear(-1)) AND
+	(resolved <= endOfYear(-1))
+
+
+
+#20 TC_Out_Of_QMSC_Adherence_All
+	(issueFunction not in linkedIssuesOf("issuetype = test")) AND
+	(issuetype in (Story, bug)) AND
+	(issueFunction IN linkedIssuesOf('project = "Document Reporting Power BI " AND status = "Done"')) AND
+	(resolution != Cancelled) AND
+	("Zephyr N/A Reason" is EMPTY) AND
+	(project = "Document Reporting Power BI ")
+
+
+
+#21 TC_Out_Of_QMSC_Adherence_Current_Month
+	(issueFunction not in linkedIssuesOf("issuetype = test")) AND
+	(issuetype in (Story, bug)) AND
+	(issueFunction IN linkedIssuesOf('project = "Document Reporting Power BI " AND status = "Done"')) AND
+	(resolution != Cancelled) AND
+	("Zephyr N/A Reason" is EMPTY) AND
+	(project = "Document Reporting Power BI ") AND
+	(reporter IN membersOf("GRP-D-IT Product Planning & Dev"))
+
+
+
+#22 TC_Out_Of_QMSC_Adherence_Current_Year
+	(issueFunction not in linkedIssuesOf("issuetype = test")) AND
+	(issuetype in (Story, bug)) AND
+	(issueFunction IN linkedIssuesOf('project = "Document Reporting Power BI " AND status = "Done"')) AND
+	(resolution != Cancelled) AND
+	(resolved >= startOfYear()) AND
+	("Zephyr N/A Reason" is EMPTY) AND
+	(project = "Document Reporting Power BI ") AND
+	(reporter IN membersOf("GRP-D-IT Product Planning & Dev"))
+
+
+
+#23 TC_Out_Of_QMSC_Adherence_Previous_Month
+	(issueFunction not in linkedIssuesOf("issuetype = test")) AND
+	(issuetype in (Story, bug)) AND
+	(issueFunction IN linkedIssuesOf('project = "Document Reporting Power BI " AND status = "Done"')) AND
+	(resolution != Cancelled) AND
+	(resolved >= startOfMonth(-1)) AND
+	("Zephyr N/A Reason" is EMPTY) AND
+	(project = "Document Reporting Power BI ") AND
+	(reporter IN membersOf("GRP-D-IT Product Planning & Dev"))

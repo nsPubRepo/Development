@@ -1,0 +1,18 @@
+Go to target sheet (in PBID)
+Pull table column (to drill-down on) from reference of SOURCE sheet into drill-down filter on TARGET sheet
+
+
+Power BI ties the source report (tab) and the drill-through (down) report (tab) together by the source (e.g., view). The source & target reports (tabs) need to pull from the same source
+
+
+
+===============================
+
+
+
+1. Create source report in PBI Desktop
+
+2. Create secondary / child / drill-through report in PBI Desktop
+	i. NOTE: Both the source / parent report and secondary / child report, all within PBI Desktop, must pull from the same source (e.g., SPRCO, view, table, etc.)
+
+3. In the secondary / child / drill-through report in PBI Desktop, immediately below the "Keep all filters" heading (in the "Visualizations" column), drag & drop all fields which are referenced in the secondary / child report (to drill through on)
