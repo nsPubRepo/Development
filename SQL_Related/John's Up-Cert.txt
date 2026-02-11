@@ -1,0 +1,156 @@
+
+
+
+
+
+/* Set write type values in Staging tables to prepare for writing to data mart tables: */
+
+	UPDATE source
+    SET WriteType = 'U'
+    FROM DMDocHub.ExtractionValue_Fact target
+    JOIN DWStage_DocHub.ExtractionValue_Fact source
+        ON  source.DocumentID           = target.DocumentID
+        AND source.DocumentTypeKey      = target.DocumentTypeKey
+        AND source.StandardLabelTypeKey = target.StandardLabelTypeKey;
+	
+
+	UPDATE source
+    SET WriteType = 'I'
+    FROM DWStage_DocHub.ExtractionValue_Fact source
+    WHERE NOT EXISTS (
+						SELECT 1
+						FROM DMDocHub.ExtractionValue_Fact target
+						WHERE target.DocumentID           = source.DocumentID
+						  AND target.DocumentTypeKey      = source.DocumentTypeKey
+						  AND target.StandardLabelTypeKey = source.StandardLabelTypeKey
+					 );
+
+
+
+
+/* Write to data mart tables: */
+	
+    UPDATE t
+    SET DocumentTypeID		     = s.DocumentTypeID
+	  , StandardLabelID		     = s.StandardLabelID
+	  , ExtractionDateUTC		 = s.ExtractionDateUTC
+	  , ExtractionDateTimeUTC	 = s.ExtractionDateTimeUTC
+	  , CreatedDateUTC			 = s.CreatedDateUTC
+	  , CreatedDateTimeUTC		 = s.CreatedDateTimeUTC
+	  , OriginalValueRaw		 = s.OriginalValueRaw
+	  , UpdatedValueRaw		     = s.UpdatedValueRaw
+	  , OriginalValueScrubbed	 = s.OriginalValueScrubbed
+	  , UpdatedValueScrubbed	 = s.UpdatedValueScrubbed
+	  , OriginalValue			 = s.OriginalValue
+	  , UpdatedValue			 = s.UpdatedValue
+	  , OriginalVibe			 = s.OriginalVibe
+	  , UpdatedVibe			     = s.UpdatedVibe
+	  , OriginalVibeOffset	     = s.OriginalVibeOffset
+	  , UpdatedVibeOffset	     = s.UpdatedVibeOffset
+	  , OriginalDeleted		     = s.OriginalDeleted
+	  , UpdatedDeleted		     = s.UpdatedDeleted
+	  , OriginalBoundingBox	     = s.OriginalBoundingBox
+	  , UpdatedBoundingBox	     = s.UpdatedBoundingBox
+	  , OriginalConfidence	     = s.OriginalConfidence
+	  , UpdatedConfidence		 = s.UpdatedConfidence
+	  , ActiveIND				 = s.ActiveIND
+	  , OriginalValueScrubbedIND = s.OriginalValueScrubbedIND
+	  , UpdatedValueScrubbedIND  = s.UpdatedValueScrubbedIND
+	  , SystemName               = s.SystemName
+	  , ProviderName			 = s.ProviderName
+	  , RecordType               = s.RecordType
+	  , DataSourceName           = s.DataSourceName
+	  , RecordCreatedDatetime	 = s.RecordCreatedDatetime
+	  , RecordModifiedDatetime   = s.RecordModifiedDatetime
+	  , RecordDeletedIND		 = s.RecordDeletedIND
+	  , JobRunID				 = @JobRunID
+    FROM DMDocHub.ExtractionValue_Fact t
+    JOIN DWStage_DocHub.ExtractionValue_Fact s
+        ON  s.DocumentID           = t.DocumentID
+        AND s.DocumentTypeKey      = t.DocumentTypeKey
+        AND s.StandardLabelTypeKey = t.StandardLabelTypeKey;
+    
+    
+    INSERT DMDocHub.ExtractionValue_Fact (
+		  DocumentID
+		, DocumentTypeKey
+		, StandardLabelTypeKey
+		, DocumentTypeID
+		, StandardLabelID
+		, ExtractionDateUTC
+		, ExtractionDateTimeUTC
+		, CreatedDateUTC
+		, CreatedDateTimeUTC
+		, OriginalValueRaw
+		, UpdatedValueRaw
+		, OriginalValueScrubbed
+		, UpdatedValueScrubbed
+		, OriginalValue
+		, UpdatedValue
+		, OriginalVibe
+		, UpdatedVibe
+		, OriginalVibeOffset
+		, UpdatedVibeOffset
+		, OriginalDeleted
+		, UpdatedDeleted
+		, OriginalBoundingBox
+		, UpdatedBoundingBox
+		, OriginalConfidence
+		, UpdatedConfidence
+		, ActiveIND
+		, OriginalValueScrubbedIND
+		, UpdatedValueScrubbedIND
+		, SystemName
+		, ProviderName
+		, RecordType
+		, DataSourceName
+		, RecordCreatedDatetime
+		, RecordModifiedDatetime
+		, RecordDeletedIND
+		, JobRunID
+    )
+    SELECT
+		  s.DocumentID
+		, s.DocumentTypeKey
+		, s.StandardLabelTypeKey
+		, s.DocumentTypeID
+		, s.StandardLabelID
+		, s.ExtractionDateUTC
+		, s.ExtractionDateTimeUTC
+		, s.CreatedDateUTC
+		, s.CreatedDateTimeUTC
+		, s.OriginalValueRaw
+		, s.UpdatedValueRaw
+		, s.OriginalValueScrubbed
+		, s.UpdatedValueScrubbed
+		, s.OriginalValue
+		, s.UpdatedValue
+		, s.OriginalVibe
+		, s.UpdatedVibe
+		, s.OriginalVibeOffset
+		, s.UpdatedVibeOffset
+		, s.OriginalDeleted
+		, s.UpdatedDeleted
+		, s.OriginalBoundingBox
+		, s.UpdatedBoundingBox
+		, s.OriginalConfidence
+		, s.UpdatedConfidence
+		, s.ActiveIND
+		, s.OriginalValueScrubbedIND
+		, s.UpdatedValueScrubbedIND
+		, s.SystemName
+		, s.ProviderName
+		, s.RecordType
+		, s.DataSourceName
+		, s.RecordCreatedDatetime
+		, s.RecordModifiedDatetime
+		, s.RecordDeletedIND
+        , @JobRunID
+    FROM DWStage_DocHub.ExtractionValue_Fact s
+    WHERE NOT EXISTS (
+        SELECT 1
+        FROM DMDocHub.ExtractionValue_Fact t
+        WHERE t.DocumentID           = s.DocumentID
+          AND t.DocumentTypeKey      = s.DocumentTypeKey
+          AND t.StandardLabelTypeKey = s.StandardLabelTypeKey
+    );
