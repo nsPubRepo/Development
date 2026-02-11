@@ -1,0 +1,138 @@
+* The report is using the UWM standard BI team's BI template
+* There should be a description page that is hidden to the viewers but unhidden internally, this should consist of a modification log with links to the stories with the changes
+* No hardcoded sql, should take care of any sql needs in the database or with DAX
+* No reading from tables or select procedures, the data the PowerBI report is utilizing should be from database views
+* I verify all slicers and filters to ensure they're behaving properly, and that all expected graphs and charts are live when making adjustments to the slicers and filters
+* No internal only data is being displayed in the BI if it is a business unit viewing (different then with internal IT BI reports). An example being no use of LoanRecordID and instead use LoanID unless it makes sense otherwise
+* Verify the correct user group has permissions to view the BI Report
+* Verify the report is correctly logged into source control
+* Validate the data in the graphs and tables in the BI report match directly to the views in the database to ensure there is no accidental filtering
+* Ensure that all sql server connections are to legitimate sources and are connected to production, so no test databases or inaccurate connections
+
+
+************************************************************
+************************************************************
+************************************************************
+
+//DEA-43119 (Deb Miller's)
+
+* Spelling/ Grammar/ Punctuation is accurate
+* Spacing and Layout looks clean and professional
+* Buttons function as intended
+* Sorting is correct/ makes sense  (things are in a logical order, such as dates, sorting buckets, etc.) 
+* Visualization titles & axis labels exist and make sense based on what the visualizations are representing
+* Interactions of visualizations function properly and make sense
+* Counts, totals, and percentages are accurate
+* Sorting and grouping makes sense
+* KPI calculations are accurate, have correct labels, and contain % or commas where needed
+* Slicers exist, function properly, and interact with other slicers and various visualizations as required/ makes sense
+* Drillthrough page filters accurately, shows correct data, and counts match with main page of report
+* Data validation: Data being presented in PowerBI report matches queries on the source tables/ views in SSMS/ Synapse/ BigQuery/ etc.
+
+
+* Which visuals should interact with each other/ drilldown?
+* Should slicers filter everything on the page? (KPIs and visuals?)
+* Which visuals will have drillthrough pages, if any?
+* Will any visuals have tooltips? If so, what info will be on the tooltip?
+* Find out where data is coming from
+	* Are we aggregating anything in PowerBI that is not currently aggregated on the backend?
+* Calculated columns/ measures
+
+************************************************************
+************************************************************
+************************************************************
+
+//Mine
+
+- PBI IDE
+	- Report refreshes from source data (e.g., view, SPROC, spreadsheet, etc.) without issue (i.e., "Refresh" button in IDE works as expected)
+	- "Back Arrow"
+		- Present (upper-left corner of report UI)
+		- Functional
+
+	- Report tab / body
+		- Report visuals
+			- Load (e.g., no errors, per visual, connecting to data source)
+			- Appropriate visuals used (e.g., a heat map visiual is being used when a bar graph should instead be)
+
+			- Content
+				- Content displays for all visuals (e.g. no empty tables / visuals)
+				- Data types as expected (e.g., alpha-numeric for an integer-only column - "Bank Statement" in "Document Type ID" column)
+				- Spelling / grammar
+				- Aggragation being performed within report
+					- Correctness
+					- Applicability
+					- Scalability (?)
+
+			- Styling
+				- Font
+					- Styles (Times New Roman, Wingdings, etc.)
+					- Effects (bold, underline, outline, etc.)
+					- Sizes
+					- Colors
+					- Orientation / justification (e.g., left, center, right)
+					- Spacing
+
+				- Appropriate visual (non-font) coloring
+					- Fill colors
+					- Object coloring
+					- "Green Bar" for table visuals
+					- etc.
+
+			- Location of visual(s) as expected / looks appropriate
+			- Appropriate visual labeling displays
+				- Titles
+				- Legends
+				- Axes
+				- Bars
+				- etc.
+
+			- Functionality
+				- Updates with application of filter(s)
+				- State change of other visuals (e.g., date slider) does / does not update visual as expected
+				- Applicable drill downs function as expected
+				- Applicable drill throughs function as expected
+				- Mouse over / hover objects
+					- Correct information displays in tool-tip / popup
+				- Tool-tips as expected
+
+		- General report tab / body
+			- Filter
+				- Appropriate / applicable filters assigned at **REPORT** level
+				- Filter view setting (displayed / hidden) state set as expected / scoped correctly
+					- All pages / tabs in PBIX
+					- Specific report page / tab
+					- Specific visual
+
+			- Columns (data source) / table view tab
+				- Data type appropriately defined
+				- Formatting appropriately defined
+				- Summarization appropriately defined
+				- Custom...
+					- ... DAX
+					- ... columns
+					- ... aggregations
+					- ... etc.
+
+			- Source data content
+				- Hierarchies exist and are defined / populated as appropriate
+
+- SQL
+	- View / SPROC
+		- Correct data sources / tables / columns
+		- Execution time (e.g., Query Store)
+		- Proper formatting (literal layout within script)
+		- Inclusion, in primary script(s), of object existance check prior to DROP / CREATE (or ALTER)
+		- Appropriate commands (e.g., using LEFT JOIN vs. INNER JOIN, etc.)
+		- Appropriatly named SQL script(s)
+		- Rollback script included
+		- Rollback script is appropriate (reverting object vs. dropping it, etc.)
+		- Rollback script, if reverting, *EXACTLY* mirrors what is currently in production
+		- Inclusion, in rollback script, of object existance check prior to DROP / CREATE (or ALTER)
+
+- PBI Report Service
+	- All applicable PBIX files (report, model, etc.) are published (uploaded) without issue / successfully
+	- All applicable model file PBIXs have appropriate refresh sechedule assigned
+	- All applicable model file PBIXs are refreshed, as expected, per schedule(s)
+	- PBIX files are in appropriate sub-foldering with the PBI service interface
+	- PBIX files are in appropriate workspace (e.g., "Document Reporting" / "Document Reporting - UAT")
