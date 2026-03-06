@@ -1,0 +1,19 @@
+
+SQL
+	- https://www.youtube.com/@BrentOzarUnlimited
+	- https://www.youtube.com/playlist?list=PLDYqU5RH_aX1YFzkgpbemCHfAkuHkUu7c
+	- https://www.brentozar.com/training/my-videos/
+	- https://www.sqlservertutorial.net/sql-server-window-functions/
+	- https://search.brave.com/search?q=SQL+Server+SUM+window+function&source=web&summary=1&conversation=089eda110186f9ceb38a814f50a3996f3bb8
+	- https://www.sqlservercentral.com/
+	- https://www.youtube.com/@KevinFeasel/videos
+	- https://www.groupby.org/
+	- https://dbatools.io/
+	- https://en.wikipedia.org/wiki/Codd%27s_12_rules
+	- https://sqlsaturday.com/#events
+	- https://learn.microsoft.com/ms-my/ssms/sql-server-management-studio-keyboard-shortcuts?view=sql-server-ver16
+
+Misc
+	- https://www.w3schools.com/python/python_getstarted.asp
+	- https://www.w3schools.com/angularjs/angularjs_intro.asp
+	- https://gitscripts.com/bash-git-prompt
