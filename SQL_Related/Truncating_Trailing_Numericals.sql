@@ -1,0 +1,7 @@
+
+
+
+
+DECLARE @x VARCHAR(50) = REPLACE('ABC_DEF_1UTI_1_0', '_', ' ')
+
+SELECT REVERSE(SUBSTRING(REVERSE(@x), PATINDEX('%[A-Z]%', REVERSE(@x)), LEN(@x) - (PATINDEX('%[A-Z]%', REVERSE(@x)) - 1)))
