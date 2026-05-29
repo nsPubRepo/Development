@@ -3,16 +3,17 @@
 
 To-Do's:
 ========
-	01) Test (& label) remaining cameras (ones that were not deployed during initial testing) - number labeling cameras as I go
-	02) Attach siding hooks to cameras
-	03) Determine wire routing around house
-	04) Determine length of wire (including female plug pigtails)
-	05) Deploy cameras (actually hang them in anticipated locations & test them as they are deployed)
-	06) Determine & order outdoor electrical box count
-	07) Run wire along bottom of house siding / 12 gauge
-	08) Create "vertical extension cord" runs / 14 gauge
+	01) Determine wire routing around house
+	02) Determine length of wire (including female plug pigtails)
+	03) Run wire along bottom of house siding / 12 gauge
+	04) Create "vertical extension cord" runs / 14 gauge
+	05) Test (& label) remaining cameras (ones that were not deployed during initial testing) - number labeling cameras as I go
+	06) Attach siding hooks to cameras
+	07) Deploy cameras (actually hang them in anticipated locations & test them as they are deployed)
 
 
+
+	XX) Determine & order outdoor electrical box count
 	XX) Determine location of cameras
 	XX) Determine count of & order famale electrical plugs
 	XX) Determine if base antennas can be upgraded to taller antennas
