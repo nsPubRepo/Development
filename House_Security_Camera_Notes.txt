@@ -3,11 +3,12 @@
 
 To-Do's:
 ========
-	01) Run wire along bottom of house siding / 12 gauge
-	02) Create "vertical extension cord" runs / 14 gauge
-	03) Test (& label) cameras - number labeling cameras as I go
-	04) Attach siding hooks to cameras
-	05) Deploy cameras (actually hang them in anticipated locations & test them as they are deployed)
+	01) Wire femal plugs / plug pigtails
+	02) Test (& label) cameras - number labeling cameras as I go
+	03) Run wire along bottom of house siding / 12 gauge
+	04) Create "vertical extension cord" runs / 14 gauge
+	05) Attach siding hooks to cameras
+	06) Deploy cameras (actually hang them in anticipated locations & test them as they are deployed)
 
 
 
