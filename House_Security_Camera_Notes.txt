@@ -1,0 +1,40 @@
+
+
+
+To-Do's:
+========
+	01) Run wire along bottom of house siding / 12 gauge
+	02) Create "vertical extension cord" runs / 14 gauge
+	03) Test (& label) cameras - number labeling cameras as I go
+	04) Attach siding hooks to cameras
+	05) Deploy cameras (actually hang them in anticipated locations & test them as they are deployed)
+
+
+
+	XX) Determine wire routing around house
+	XX) Determine length of wire (including female plug pigtails)
+	XX) Determine & order outdoor electrical box count
+	XX) Determine location of cameras
+	XX) Determine count of & order famale electrical plugs
+	XX) Determine if base antennas can be upgraded to taller antennas
+	XX) Determine printer-desk / camera base station setup (VGA switch?)
+	XX) Determine siding hook count (have vs. order)
+	XX) Determine electrical connectors (have vs. order) and if current ones will work for cameras
+	XX) Determine size & count of outdoor wire caps
+
+
+
+Things to order:
+================
+	XX) Wire - 12 gauge / hot, neutral, and ground		(how much?)
+	XX) Wire - 14 gauge / hot, neutral - vertical runs	(how much?)
+	XX) Outdoor elecetrical boxes                  		(how many?)
+	XX) Female electrical plugs (12 gauge)
+	XX) Siding hooks
+	XX) Electrical connectors
+	XX) Ourdoor wire caps
+
+
+
+
+6909!!
