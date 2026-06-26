@@ -3,17 +3,17 @@
 
 To-Do's:
 ========
-	01) Prep outlet / female plugs & pigtails (12 gauge)
-	02) Test & label cameras
-	03) Attach siding hooks to cameras
-	04) Deploy cameras (actually hang them in anticipated locations)
-	05) Run wire along bottom of house siding / 12 gauge
-	06) Deploy in-box outlets & camera plug-transformers
-	07) Create "vertical extension cord" runs / 14 gauge
-	08) Connect in-box & at-camera connectors to 14 gauge wire
+	01) Test & label cameras
+	02) Attach siding hooks to cameras
+	03) Deploy cameras (actually hang them in anticipated locations)
+	04) Run wire along bottom of house siding / 12 gauge
+	05) Deploy in-box outlets & camera plug-transformers
+	06) Create "vertical extension cord" runs / 14 gauge
+	07) Connect in-box & at-camera connectors to 14 gauge wire
 
 
 
+	XX) Prep outlet / female plugs & pigtails (12 gauge)
 	XX) Determine wire routing around house
 	XX) Determine length of wire (including female plug pigtails)
 	XX) Determine & order outdoor electrical box count
