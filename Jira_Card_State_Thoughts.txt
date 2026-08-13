@@ -1,0 +1,101 @@
+
+SQL Script
+==========
+
+1. "To Do"
+		- Card needs to be flushed out (ACs, description, etc.)
+		- Too early to begin Dev Research or general Development
+
+
+?. "Requirements Gathering"
+		- Business Analyst performing busines research
+		- 3 Amigos takes place
+		- Product Owner providing guidance as needed regarding direction of Jira card / ask
+
+
+2. "Ready"
+		- Once card is ready (ACs defined, 3-amigos, etc.), card moved to "Ready" (dev can now pick card up / assign to themselves)
+
+
+3. "Dev Research"
+		- Developer is figuring out the "how" to implement solution and what it will take to implement
+		- Tables, SPROCs, views, database(s), servers, etc. are being flushed out at this point
+
+
+4. "Developing"
+		- Developer is activly implementing solution
+		- Once developer completes their unity testing, they ensure the applicable scripts have been successfully deployed to the development environment
+
+
+5. "Code Review" 
+		- A non-solution developing developer reviews code for general standard adherence in addition to commonly accepted good programming practices (language-specific)
+		- The developing developer requests code review in both the IT "Code Review" Teams channel as well as in the SnF Teams channel
+			- Requests can be simultaneously sent or one sent and then the second sent if, after a length of time, it appears the first request is not being acted upon
+
+
+6. "Ready for Testing"
+		- The non-developing developer who performed the code review *MAY* set the card status to "Ready for Testing" otherwise, if they do not, the developing developer can set the status to this state
+		- Holding pattern card status before Qx assigns Jira card to themselves for review (Qx reviewer will also update the status to be "Testing"
+		- Once card is in "Ready for Testing", developing developer will put Qx review request in "Quality Assurance" SnF channel requesting Qx review
+
+
+7. "Testing"
+		- This is assigned by the Qx reviewer once they begin their review process
+		- If any defects are observed, Qx reviewer will create Jira defect card (and link it to the parent / story Jira card)
+		- Qx reviewer will notify developer of defects observed / Qx reviewer & developer will review defect(s) together
+
+
+8. "Ready for Stage"
+		- Qx reviewer sets the Jira card to this status once they have passed their review
+		- If defects are identified, the card will be set, by the Qx reviewer, back to "Developing"
+		- Developer submits Stage release request via Teams channel(s) and noifies Qx reviewer once all artifacts have been successfully deployed to Stage environment
+
+
+9. "Stage Testing"
+		- Developer notifies, via Teams Channel (and possibly Jira card) Qx reviewer once all artifacts are fully deployed to the Stage environment
+		- Qx reviewer sets the Jira card to this status once they begin their Stage review
+		- If any defects are observed, Qx reviewer will create Jira defect card (and link it to the parent / story Jira card)
+		- Qx reviewer will notify developer of defects observed / Qx reviewer & developer will review defect(s) together
+
+
+10. "User Acceptance Testing"
+		- Qx rewviewer sets the Jira card to this status once their review has passed 
+		- Qx reviewer notifies Product Owner that the Jira card is ready for their review
+		- Once Product Onwer completes their User Aceptance Review testing, they will make the appropriate annotations in the Jira card
+		- The developer will request, in the appropriate Teams channel(s) a production environment deploy of the applicable artifact(s)
+
+
+11. "Deploying To Production"
+		- Once the responsible party (does not need to be a developer) begins the deployment process, they will update the Jira card to the "Deploying To Prod" status
+
+
+12. "In Production"
+		- Whomever is the responsible party for deploying the artifact(s) to the production environment will update, once the deployment is successful, the Jira card to the state of "In Production"
+		- The developer will request, of the Qx reviewer, a production review of the deploy artifact(s) / Jira card
+		- Once the Qx reviewer reports back that the production testing has passed, the developer will tag the Product owner in the Jira card stating that testing in production has passed
+		- The developer will tag the Business Analyst in the Jira card requestisng the Jira card in question be tranistioned to the "Done" status
+
+
+13. "Done"
+		- Business Analyst will update the Jira card status to this state once they receive notification of the card's successful production release along with confirming that there are no further action items remaining for the card in question
+
+
+
+
+
+
+Developing
+Code Review
+Ready For Testing
+Testing
+Ready For Stage
+Stage Testing
+Power BI Review
+Ready To Publish
+User Acceptance Testing
+UAT
+Ready To Release
+Ready To Deploy
+Deploying To Prod
+In Production
+Done
