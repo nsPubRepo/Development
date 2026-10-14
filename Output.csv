@@ -1,0 +1,43 @@
+Report_Date_Start,Report_Start_Day_Of_Week,Employee_Full_Name,Employee_Title,YRS_With_Company,Avg_YRS_With_Company,Business_Days_With_Company,Department_Desc,Department_Termination_Cnt_Rank,Manager_Full_Name,Managers_Manger_Full_Name,Original_Hire_Date,Termination_Day_Of_Week,Termination_Date,Per_Day_Termination_Cnt,Per_Day_Hire_Cnt,Date_Range_Termination_Cnt,Avg_Termination_Per_Day,Active_Employee_Cnt,Per_Day_Pct_Termination,Report_Range_Pct_Termination
+2026-10-07,Wednesday,Robert Cohen,Underwriter II,1.916666667,2.628968254,493,Underwriter II,1,Alvin Jabero,Randi Yako,2024-11-18,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Haylee Alderson,Creative Project OwnerIII,5.416666667,2.628968254,1403,UWM Marketing,1,Mary Kay Kohrman,Sarah DeCiantis,2021-05-24,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Jason Roteman,Principal Engineer,8.916666667,2.628968254,2313,IT-Service Support,1,Ashley Miles,Andrew Pirkola,2017-11-27,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Alexis Godfrey,Auditor II,3.666666667,2.628968254,948,Internal Audit,1,Frances Lay,Blago Sekreski,2023-02-20,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Andrew DeWalt,Application Architect,13.75,2.628968254,3573,Software Eng Operations,1,Sean Armstrong,Jason Bressler,2013-01-28,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Lamya Greathouse,Servicing - Customer Advo,0.25,2.628968254,63,Servicing,1,Eric Hackenberg,Antoinette Mixon-Williams,2026-07-13,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Valerii Kuzmenko,Platform Engineer III,1.666666667,2.628968254,423,IT-Data and AI,2,Rob Fretter,Zach Blagg,2025-02-24,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Karthika Devendran,Business Analyst II,6.083333333,2.628968254,1578,IT-Data and AI,2,Udaya Gangasani,Gene Robinson,2020-09-21,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Chavonne Gault,TL Ops Spec II - Title Ab,1.916666667,2.628968254,493,TRAC,2,Kyle Kriebel,Maria Subashi,2024-11-18,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Emmaruth Tajanlangit,Escrow Manager,1,2.628968254,263,TRAC,2,Laura Goehring,Paige Spinale,2025-10-06,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Laila Algharably,Ops Spec I - VVOE,0.25,2.628968254,63,Lending Support,2,Erin Scholtz,James Boehnlein,2026-07-13,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Olivvia Birchett Buttry,Ops Spec I - Process Asst,1.5,2.628968254,388,Lending Support,2,Lanae Taylor,Jenna Decker,2025-04-14,Wednesday,2026-10-07,12,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Kezia Turner,Project Assistant,2.25,2.628968254,584,Underwriting CI,1,Hannah Beebe,Amber Updyke,2024-07-15,Thursday,2026-10-08,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Emily Williams,Corporate Counsel,1.166666667,2.628968254,309,Compliance,1,Sarah Nantel,Mary Thieme,2025-08-04,Thursday,2026-10-08,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Jonathan Brodsky,Ops Spec I - Process Asst,0.75,2.628968254,184,Lending Support,1,Danielle Cohn,Archie Munson,2026-01-26,Thursday,2026-10-08,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Stasia Harris,Ser-Customer Care Spec,0.083333333,2.628968254,19,Servicing,1,Brianna Isabella,Lisa Rizzo,2026-09-14,Thursday,2026-10-08,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Aurora Ave-Lallemant,Ops Spec III - COC,1.166666667,2.628968254,309,Closing,1,Amanda DiMambro,Sean VanWambeke,2025-08-04,Thursday,2026-10-08,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Alex Mallon,Ops Spec I - Processing,0.166666667,2.628968254,44,Post Closing Operations,2,Anwar Said,Joe Rood,2026-08-10,Thursday,2026-10-08,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Justin Hill,Ops Spec I - PC Review,0.25,2.628968254,64,Post Closing Operations,2,Kendra Jones,Rachel Shaver,2026-07-13,Thursday,2026-10-08,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Jayakumar Srinivasan,Senior Software Developer,1,2.628968254,250,Software Eng Growth,1,Jelani Kyles,Jagminder Bains,2025-10-27,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Shelby Shinavier,IT Product Manager II,5.416666667,2.628968254,1405,IT-Product Strat & Deliv,1,Keaton Levock,Jillian Mantua,2021-05-24,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Garrett Nutting,Security Administrator I,1.416666667,2.628968254,359,IT-Information Security,1,Mahdi Kabir,Jay Parekh,2025-05-27,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Bharanitharan Rajendran,Ops Spec II TRAC Assist,0.916666667,2.628968254,235,TRAC,1,Joshua Jones,Paige Spinale,2025-11-17,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Rivka Morgan-Sherman,Setup Loan Coordinator,1.833333333,2.628968254,485,Underwriter II,1,Jacob Segedi,Ana Robbins,2024-12-02,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Austin McCall,Hospitality Specialist,1.583333333,2.628968254,405,United Services,1,Sara Stanton,Tim Zub,2025-03-24,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Cincere Wilson,Ops Spec I - Processing,1.666666667,2.628968254,440,Post Closing Operations,2,Anwar Said,Joe Rood,2025-02-03,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Johnathan Sanderson,Ops Spec I - Coll Review,2.166666667,2.628968254,570,Post Closing Operations,2,Brandon Pruente,Lee Piekarski,2024-08-05,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Arshana Sanders - Willis,Ops Spec III - Closing,2.166666667,2.628968254,565,Closing,2,Dylan Vallis,Joe Houghton,2024-08-12,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Voislav Mitrusevski,Ops Spec III - Closing,1.916666667,2.628968254,500,Closing,2,Collin Crook,Dwan Golden,2024-11-11,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Lisa Bell,Ops Spec I - Doc Labeling,2.583333333,2.628968254,670,Lending Support,3,Joseph Curtis,Mariah Chamas,2024-03-18,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,James White,Ops Spec I - VVOE,0.333333333,2.628968254,90,Lending Support,3,Khiana Smith,James Boehnlein,2026-06-08,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,William Read,Ser-Customer Care Spec,0.416666667,2.628968254,115,Servicing,3,Nia Rogers,Lisa Rizzo,2026-05-04,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Rachael Dugan,Servicing - Cust Res,1.25,2.628968254,330,Servicing,3,Sarafina Apolloni,Allie Parry,2025-07-07,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Renee Gossett,"VP, Default Servicing",1.333333333,2.628968254,340,Servicing,3,Melinda Wilner,Mat Ishbia,2025-06-23,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Adil Ahmet Sargin,Ops Spec I - Setup,2.166666667,2.628968254,560,Lending Support,3,Emily Koch,Mariah Chamas,2024-08-19,Friday,2026-10-09,16,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Taylor Jones,Ops Spec I - Vendor Asst,2.166666667,2.628968254,556,Lending Support,1,Kyle Polega,Jenna Decker,2024-08-26,Monday,2026-10-12,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Christopher Fortuna,Senior Underwriter,9.5,2.628968254,2471,Senior Underwriter,1,Charles Rodriguez,Cameron Flynn,2017-04-24,Monday,2026-10-12,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Kimoya Tate,Ser-Customer Care Spec,0.083333333,2.628968254,21,Servicing,1,Nia Rogers,Lisa Rizzo,2026-09-14,Monday,2026-10-12,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Emily Basila,Talent Acquisition Sp II,2.5,2.628968254,646,TMS - Talent,1,Bishop Ytterock,Gjon Gjevalini,2024-04-22,Monday,2026-10-12,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Imari Forris,Ops Spec III - Closing,2.416666667,2.628968254,626,Closing,1,Jennifer Marchioni,Batoul Hawley,2024-05-20,Monday,2026-10-12,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Michael Rushford,Senior Account Executive,6.166666667,2.628968254,1606,UWM Sales,2,Donnell Tilmon,Aaron Katz,2020-08-17,Monday,2026-10-12,7,0,42,8.4,63099,0.0133124,0.0665621
+2026-10-07,Wednesday,Rachel Kelemen,Senior Account Executive,7.25,2.628968254,1886,UWM Sales,2,Beau Krueger,Ali Shahidi,2019-07-22,Monday,2026-10-12,7,0,42,8.4,63099,0.0133124,0.0665621
