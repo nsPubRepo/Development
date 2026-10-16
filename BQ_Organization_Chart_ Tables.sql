@@ -20,19 +20,19 @@
     , cte_Initial AS
         (
             SELECT cte_Variables.Report_Date_Start
-                , FORMAT_DATE('%A', cte_Variables.Report_Date_Start) AS Report_Start_Day_Of_Week
-                , employee_id
-                , title_desc
-                , last_name_str
-                , first_name_str
-                , manager_full_name
-                , department_desc
-                , original_hire_d
-                , termination_d
-                , FORMAT_DATE('%A', termination_d) AS Termination_Day_Of_Week
-                , DATE_DIFF(termination_d, original_hire_d, MONTH) AS Mths_With_Company
-                , ROW_NUMBER() OVER () AS Cnt
-                , manager_id
+                 , FORMAT_DATE('%A', cte_Variables.Report_Date_Start) AS Report_Start_Day_Of_Week
+                 , employee_id
+                 , title_desc
+                 , last_name_str
+                 , first_name_str
+                 , manager_full_name
+                 , department_desc
+                 , original_hire_d
+                 , termination_d
+                 , FORMAT_DATE('%A', termination_d) AS Termination_Day_Of_Week
+                 , DATE_DIFF(termination_d, original_hire_d, MONTH) AS Mths_With_Company
+                 , ROW_NUMBER() OVER () AS Cnt
+                 , manager_id
             FROM `pr-prdldea.TeamMember_DB.TeamMember_DB__OrgChart`
 
                 CROSS JOIN cte_Variables
@@ -43,22 +43,22 @@
                 -- AND department_desc LIKE cte_Variables.Departmnet
 
             GROUP BY cte_Variables.Report_Date_Start
-                , employee_id
-                , title_desc
-                , last_name_str
-                , first_name_str
-                , manager_full_name
-                , department_desc
-                , original_hire_d
-                , termination_d
-                , manager_id
+                   , employee_id
+                   , title_desc
+                   , last_name_str
+                   , first_name_str
+                   , manager_full_name
+                   , department_desc
+                   , original_hire_d
+                   , termination_d
+                   , manager_id
         )	--cte_Initial
 
 
 	, cte_total_active_employees AS
         (
             SELECT cte_Variables.Report_Date_Start
-                , employee_id
+                 , employee_id
             FROM `pr-prdldea.TeamMember_DB.TeamMember_DB__OrgChart`
 
                 CROSS JOIN cte_Variables
@@ -72,19 +72,19 @@
     , cte_Hired AS
         (
             SELECT cte_Variables.Report_Date_Start
-                , FORMAT_DATE('%A', cte_Variables.Report_Date_Start) AS Report_Start_Day_Of_Week
-                , employee_id
-                , title_desc
-                , last_name_str
-                , first_name_str
-                , manager_full_name
-                , department_desc
-                , original_hire_d
-                , termination_d
-                , FORMAT_DATE('%A', termination_d) AS Termination_Day_Of_Week
-                , DATE_DIFF(termination_d, original_hire_d, MONTH) AS Mths_With_Company
-                , ROW_NUMBER() OVER () AS Cnt
-                , manager_id
+                 , FORMAT_DATE('%A', cte_Variables.Report_Date_Start) AS Report_Start_Day_Of_Week
+                 , employee_id
+                 , title_desc
+                 , last_name_str
+                 , first_name_str
+                 , manager_full_name
+                 , department_desc
+                 , original_hire_d
+                 , termination_d
+                 , FORMAT_DATE('%A', termination_d) AS Termination_Day_Of_Week
+                 , DATE_DIFF(termination_d, original_hire_d, MONTH) AS Mths_With_Company
+                 , ROW_NUMBER() OVER () AS Cnt
+                 , manager_id
             FROM `pr-prdldea.TeamMember_DB.TeamMember_DB__OrgChart`
 
                 CROSS JOIN cte_Variables
@@ -95,14 +95,14 @@
                 -- AND department_desc LIKE cte_Variables.Departmnet
 
             GROUP BY cte_Variables.Report_Date_Start
-                , employee_id
-                , title_desc
-                , last_name_str
-                , first_name_str
-                , manager_full_name
-                , department_desc
-                , original_hire_d
-                , termination_d
+                   , employee_id
+                   , title_desc
+                   , last_name_str
+                   , first_name_str
+                   , manager_full_name
+                   , department_desc
+                   , original_hire_d
+                   , termination_d
                 , manager_id
         ) --cte_Hired
 
@@ -180,7 +180,14 @@ FROM cte_Initial
 
 
     CROSS JOIN (
-                    SELECT COUNT(1) AS Cnt
+                    -- SELECT COUNT(1) AS Cnt
+                    -- FROM `pr-prdldea.TeamMember_DB.TeamMember_DB__OrgChart`
+                    -- WHERE termination_d IS NULL
+                    --     AND last_hire_d IS NOT NULL --I think the logic for doing this is to exclude double counting employee - only count employee as they exist in their current position and exclude any previous positions / titles they have held - essentially consider those past positions are null / void (but we don't want to consider those positions are being a layoff / firing)
+                    --     AND email_addr IS NOT NULL
+                    --     AND manager_id IS NOT NULL
+
+                    SELECT COUNT(DISTINCT employee_id) AS Cnt
                     FROM `pr-prdldea.TeamMember_DB.TeamMember_DB__OrgChart`
                     WHERE termination_d IS NULL
                         AND last_hire_d IS NOT NULL --I think the logic for doing this is to exclude double counting employee - only count employee as they exist in their current position and exclude any previous positions / titles they have held - essentially consider those past positions are null / void (but we don't want to consider those positions are being a layoff / firing)
@@ -216,10 +223,9 @@ GROUP BY cte_Initial.Report_Date_Start
        , Active_Headcount.Cnt
 
 
-ORDER BY
-    cte_Initial.termination_d
-    , cte_Initial.termination_Day_Of_Week
-    , COUNT(1) OVER (PARTITION BY cte_Initial.department_desc, cte_Initial.termination_d ORDER BY cte_Initial.department_desc ASC) ASC
+ORDER BY cte_Initial.termination_d
+       , cte_Initial.termination_Day_Of_Week
+       , COUNT(1) OVER (PARTITION BY cte_Initial.department_desc, cte_Initial.termination_d ORDER BY cte_Initial.department_desc ASC) ASC
 
 
 
