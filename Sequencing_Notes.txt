@@ -32,7 +32,7 @@ BigQuery / DBT (non-Terraforming / table creation)
 	13) QA will update Jira card to be in UAT state
 	14) QA / PO will notify of PO review is good
 	15) Create "Production" PR (base:production / compare:develop)
-	16) Request GitHub PR review "Final PR Review Request" Teams Channel (let them know it's a production PR review)
+	16) Request GitHub PR review "Final GitHub PR Review Request" Teams Channel (let them know it's a production PR review)
 	17) Once approved, I will be notified to click "Merge" (into "Production" repo branch)
 	18) Change story status to In Prod
 	19) Notify QA for Prod review
